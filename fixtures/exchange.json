@@ -41,6 +41,16 @@
         "M"
       ],
       "cross_heat": true
+    },
+    {
+      "id": "C5",
+      "principal": "XU",
+      "mode": "assay_ratio",
+      "minimum": 0,
+      "grades": [
+        "H"
+      ],
+      "cross_heat": false
     }
   ],
   "heats": [
@@ -204,7 +214,7 @@
     {
       "id": "Q-2",
       "owner": "C2",
-      "recipient": "C3",
+      "recipient": "C5",
       "heat": "H1",
       "grades": [
         "H"
