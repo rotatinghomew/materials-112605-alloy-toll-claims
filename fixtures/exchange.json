@@ -1,0 +1,267 @@
+{
+  "owners": [
+    {
+      "id": "C1",
+      "principal": "QIU",
+      "mode": "assay_ratio",
+      "minimum": 0,
+      "grades": [
+        "H",
+        "M"
+      ],
+      "cross_heat": false
+    },
+    {
+      "id": "C2",
+      "principal": "YUE",
+      "mode": "guaranteed",
+      "minimum": 2100,
+      "grades": [
+        "H"
+      ],
+      "cross_heat": true
+    },
+    {
+      "id": "C3",
+      "principal": "HE",
+      "mode": "assay_ratio",
+      "minimum": 0,
+      "grades": [
+        "M"
+      ],
+      "cross_heat": false
+    },
+    {
+      "id": "C4",
+      "principal": "HE",
+      "mode": "guaranteed",
+      "minimum": 1250,
+      "grades": [
+        "H",
+        "M"
+      ],
+      "cross_heat": true
+    }
+  ],
+  "heats": [
+    {
+      "id": "H1",
+      "alloy": "HE-77",
+      "max_feed": 7800,
+      "threshold_h": 96.0,
+      "threshold_m": 93.0,
+      "started": "2027-01-18T09:20:00+08:00"
+    },
+    {
+      "id": "H2",
+      "alloy": "HE-77",
+      "max_feed": 5700,
+      "threshold_h": 96.0,
+      "threshold_m": 93.0,
+      "started": "2027-01-18T12:20:00+08:00"
+    },
+    {
+      "id": "H3",
+      "alloy": "HX-12",
+      "max_feed": 4000,
+      "threshold_h": 96.0,
+      "threshold_m": 93.0,
+      "started": null
+    }
+  ],
+  "feed": [
+    {
+      "id": "F-1",
+      "alloy": "HE-77",
+      "depositor": "WH-A",
+      "owner": "C1",
+      "mass": 3100,
+      "pure": 3025,
+      "assigned": "H1",
+      "consent": true,
+      "delivered": "2027-01-18T08:10:00+08:00"
+    },
+    {
+      "id": "F-2",
+      "alloy": "HE-77",
+      "depositor": "WH-B",
+      "owner": "C2",
+      "mass": 2450,
+      "pure": 2250,
+      "assigned": "H1",
+      "consent": true,
+      "delivered": "2027-01-18T08:40:00+08:00"
+    },
+    {
+      "id": "F-3",
+      "alloy": "HE-77",
+      "depositor": "C3",
+      "owner": "C3",
+      "mass": 1600,
+      "pure": 1520,
+      "assigned": "H1",
+      "consent": true,
+      "delivered": "2027-01-18T09:05:00+08:00"
+    },
+    {
+      "id": "F-4",
+      "alloy": "HE-77",
+      "depositor": "WH-B",
+      "owner": "C2",
+      "mass": 1200,
+      "pure": 1180,
+      "assigned": "H1",
+      "consent": false,
+      "delivered": null
+    },
+    {
+      "id": "F-5",
+      "alloy": "HE-77",
+      "depositor": "C4",
+      "owner": "C4",
+      "mass": 4400,
+      "pure": 4310,
+      "assigned": "H2",
+      "consent": true,
+      "delivered": "2027-01-18T11:50:00+08:00"
+    }
+  ],
+  "taps": [
+    {
+      "id": "T-1",
+      "heat": "H1",
+      "mass": 3950,
+      "happened": "2027-01-18T10:30:00+08:00"
+    },
+    {
+      "id": "T-2",
+      "heat": "H1",
+      "mass": 2340,
+      "happened": "2027-01-18T10:50:00+08:00"
+    },
+    {
+      "id": "T-3",
+      "heat": "H2",
+      "mass": 4030,
+      "happened": "2027-01-18T13:15:00+08:00"
+    }
+  ],
+  "assay": [
+    {
+      "id": "Y-1",
+      "tap": "T-1",
+      "purity": 96.7,
+      "phase": "provisional",
+      "replaces": null,
+      "happened": "2027-01-18T10:50:00+08:00"
+    },
+    {
+      "id": "Y-2",
+      "tap": "T-1",
+      "purity": 96.4,
+      "phase": "signed",
+      "replaces": "Y-1",
+      "happened": "2027-01-18T11:10:00+08:00"
+    },
+    {
+      "id": "Y-3",
+      "tap": "T-2",
+      "purity": 93.4,
+      "phase": "signed",
+      "replaces": null,
+      "happened": "2027-01-18T11:15:00+08:00"
+    },
+    {
+      "id": "Y-4",
+      "tap": "T-1",
+      "purity": 95.9,
+      "phase": "signed",
+      "replaces": "Y-2",
+      "happened": "2027-01-18T12:05:00+08:00"
+    },
+    {
+      "id": "Y-5",
+      "tap": "T-3",
+      "purity": 97.3,
+      "phase": "signed",
+      "replaces": null,
+      "happened": "2027-01-18T13:50:00+08:00"
+    }
+  ],
+  "claims": [
+    {
+      "id": "Q-1",
+      "owner": "C2",
+      "recipient": "C2",
+      "heat": "H1",
+      "grades": [
+        "H"
+      ],
+      "qty": 1200,
+      "operation": "pickup",
+      "happened": "2027-01-18T11:18:00+08:00"
+    },
+    {
+      "id": "Q-2",
+      "owner": "C2",
+      "recipient": "C3",
+      "heat": "H1",
+      "grades": [
+        "H"
+      ],
+      "qty": 900,
+      "operation": "assignment",
+      "happened": "2027-01-18T11:31:00+08:00"
+    },
+    {
+      "id": "Q-3",
+      "owner": "C1",
+      "recipient": "C1",
+      "heat": "H1",
+      "grades": [
+        "M"
+      ],
+      "qty": 1200,
+      "operation": "pickup",
+      "happened": "2027-01-18T11:50:00+08:00"
+    },
+    {
+      "id": "Q-4",
+      "owner": "C2",
+      "recipient": "C2",
+      "heat": "H2",
+      "grades": [
+        "H"
+      ],
+      "qty": 900,
+      "operation": "replacement",
+      "happened": "2027-01-18T14:10:00+08:00"
+    }
+  ],
+  "receipts": [
+    {
+      "id": "WG-1",
+      "claim": "Q-1",
+      "stage": "weighed_out",
+      "qty": 700,
+      "happened": "2027-01-18T11:40:00+08:00",
+      "arrived": "2027-01-18T12:20:00+08:00"
+    },
+    {
+      "id": "WG-2",
+      "claim": "Q-1",
+      "stage": "remaining_on_site",
+      "qty": 500,
+      "happened": "2027-01-18T12:24:00+08:00",
+      "arrived": "2027-01-18T12:24:00+08:00"
+    },
+    {
+      "id": "WG-3",
+      "claim": "Q-3",
+      "stage": "accepted",
+      "qty": 0,
+      "happened": "2027-01-18T11:57:00+08:00",
+      "arrived": "2027-01-18T12:00:00+08:00"
+    }
+  ]
+}
